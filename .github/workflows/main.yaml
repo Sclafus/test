@@ -17,8 +17,9 @@ jobs:
           path: tmp
 
       - name: 3 - compile source code
-        run: pwd && ls -la
-        run: /usr/bin/gcc something.c -o compiled
+        run: | 
+          pwd && ls -la
+          /usr/bin/gcc something.c -o compiled
       
       - name: 3 - upload artifact
         uses: actions/upload-artifact@v2
