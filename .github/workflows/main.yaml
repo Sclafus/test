@@ -1,4 +1,4 @@
-
+name: Compile me daddy
 on:
   push:
     branches: [ senpai ]
