@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 1 - create tmp folder
-        run: mkdir tmp && cd tmp
+        run: mkdir -p tmp/compiled
       
       - name : 2 - clone
         uses: actions/checkout@v2
@@ -17,10 +17,10 @@ jobs:
           path: tmp
 
       - name: 3 - compile source code
-        run: cd tmp && /usr/bin/gcc something.c -o compiled
+        run: cd tmp && /usr/bin/gcc something.c -o ./compiled/something
       
       - name: 4 - upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: assets-for-download
-          path: tmp
+          path: tmp/compiled
