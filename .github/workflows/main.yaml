@@ -17,7 +17,7 @@ jobs:
           path: tmp
 
       - name: 3 - compile source code
-        run: cd tmp && /usr/bin/gcc something.c -o ./compiled/something
+        run: cd tmp && /usr/bin/gcc something.c -o compiled/something
       
       - name: 4 - upload artifact
         uses: actions/upload-artifact@v2
