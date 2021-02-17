@@ -5,7 +5,7 @@ on:
   
 jobs:
 
-  artifacts:
+  linux-build:
     runs-on: ubuntu-latest
     steps:
       - name: 1 - create tmp folder
@@ -22,5 +22,5 @@ jobs:
       - name: 4 - upload artifact
         uses: actions/upload-artifact@v2
         with:
-          name: assets-for-download
+          name: linux build
           path: tmp/compiled
