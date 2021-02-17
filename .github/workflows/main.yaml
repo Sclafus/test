@@ -13,6 +13,7 @@ jobs:
       
       - name : 2 - clone
         uses: actions/checkout@v2
+        path: tmp
 
       - name: 3 - compile source code
         run: gcc -o compiled something.c
