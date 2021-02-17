@@ -5,7 +5,7 @@ on:
   
 jobs:
 
-  archive-build-artifacts:
+  artifacts:
     runs-on: ubuntu-latest
     steps:
       - name: 1 - create tmp folder
