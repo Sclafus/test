@@ -19,7 +19,7 @@ jobs:
       - name: 3 - compile source code
         run: cd tmp && /usr/bin/gcc something.c -o compiled
       
-      - name: 3 - upload artifact
+      - name: 4 - upload artifact
         uses: actions/upload-artifact@v2
         with:
           name: assets-for-download
