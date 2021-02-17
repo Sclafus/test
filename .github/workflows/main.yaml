@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: 1 - create tmp folder
-        run: mkdir tmp
+        run: mkdir tmp && cd tmp
       
       - name : 2 - clone
         uses: actions/checkout@v2
